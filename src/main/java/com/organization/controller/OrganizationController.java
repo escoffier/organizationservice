@@ -20,7 +20,7 @@ public class  OrganizationController {
     @GetMapping(value = "/{organizationId}")
     public Organization get(@PathVariable("organizationId") Long organizationId, @RequestHeader HttpHeaders headers) {
         logger.info("Get organization by id: " + organizationId);
-        logger.info("tmx-correlation-id: ", headers.toString());
+        //logger.info("tmx-correlation-id: ", headers.toString());
         return service.getOrg(organizationId);
     }
 
