@@ -24,7 +24,7 @@ public class OrganizationService {
 
     }
 
-    public void deleteOrg(Organization org){
-
+    public void deleteOrg(Long organizationId){
+        organizationMapper.deleteOrg(organizationId);
     }
 }

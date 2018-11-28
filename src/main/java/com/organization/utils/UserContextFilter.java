@@ -23,6 +23,7 @@ public class UserContextFilter implements Filter {
         UserContextHolder.getContext().setOrgId(httpServletRequest.getHeader(UserContext.ORG_ID));
 
         logger.debug("Special Routes Service Incoming Correlation id: {}", UserContextHolder.getContext().getCorrelationId());
+        logger.info("------UserContextFilter, Authorization: " + httpServletRequest.getHeader("Authorization"));
         filterChain.doFilter(httpServletRequest, servletResponse);
     }
 

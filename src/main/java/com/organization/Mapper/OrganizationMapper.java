@@ -10,5 +10,5 @@ public interface OrganizationMapper {
 
     //public void updateOrg(Organization org);
 
-    //public void deleteOrg(Organization org);
+    public void deleteOrg(Long organizationId);
 }

@@ -28,4 +28,9 @@ public class  OrganizationController {
     public void post(@PathVariable("organizationId") String organizationId, @RequestBody Organization organization){
         service.saveOrg(organization);
     }
+
+    @DeleteMapping(value = "/{organizationId}")
+    public void deleteOrg(@PathVariable("organizationId") Long organizationId){
+        service.deleteOrg(organizationId);
+    }
 }

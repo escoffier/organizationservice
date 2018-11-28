@@ -14,4 +14,8 @@
 	    	#{id}, #{name}, #{contactName}, #{contactEmail}, #{contactPhone}
 	    )
 	</insert>
+
+    <delete id="deleteOrg" parameterType="long">
+        delete from t_organizations where id = #{id}
+    </delete>
 </mapper>
