@@ -15,6 +15,11 @@
 	    )
 	</insert>
 
+    <update id="updateOrg" parameterType="organization" >
+        update t_organizations set name= #{name}, contact_name = #{contactName}, contact_email= #{contactEmail}, contact_phone = #{contactPhone}
+        where id = #{id}
+    </update>
+
     <delete id="deleteOrg" parameterType="long">
         delete from t_organizations where id = #{id}
     </delete>

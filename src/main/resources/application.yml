@@ -38,3 +38,15 @@ security:
   oauth2:
     resource:
       user-info-uri: http://192.168.21.120:8091/user
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: orgChangeTopic
+          content-type: application/json
+      kafka:
+        binder:
+          brokers: 192.168.21.225:9092
+          zk-nodes: 192.168.21.225:2181
+

@@ -8,7 +8,7 @@ public interface OrganizationMapper {
 
     public void saveOrg(Organization org);
 
-    //public void updateOrg(Organization org);
+    public void updateOrg(Organization org);
 
     public void deleteOrg(Long organizationId);
 }
